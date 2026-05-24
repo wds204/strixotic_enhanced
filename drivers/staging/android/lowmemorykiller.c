@@ -75,15 +75,18 @@ static short lowmem_adj[6] = {
 	12,
 };
 
-static int lowmem_adj_size = 4;
+static int lowmem_adj_size = 6;
 static int lowmem_minfree[6] = {
-	3 * 512,	/* 6MB */
-	2 * 1024,	/* 8MB */
-	4 * 1024,	/* 16MB */
-	16 * 1024,	/* 64MB */
+	3 * 512,   /* 6MB  - foreground */
+	2 * 1024,  /* 8MB */
+	4 * 1024,  /* 16MB */
+	16 * 1024, /* 64MB */
+	24 * 1024, /* 96MB */
+	30 * 1024, /* 120MB - kill background */
+};
 };
 
-static int lowmem_minfree_size = 4;
+static int lowmem_minfree_size = 6;
 static int lmk_fast_run = 1;
 
 static unsigned long lowmem_deathpending_timeout;
